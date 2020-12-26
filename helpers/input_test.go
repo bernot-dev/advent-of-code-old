@@ -20,7 +20,7 @@ func TestString(t *testing.T) {
 }
 
 func TestStringLines(t *testing.T) {
-	inputFile, err := os.Open("stringslice.txt")
+	inputFile, err := os.Open("stringlines.txt")
 	if err != nil {
 		t.Error(err)
 	}
