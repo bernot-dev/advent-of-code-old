@@ -53,6 +53,5 @@ func ReadInput(f string) Input {
 	for i, line := range lines {
 		p[i] = NewPresent(line)
 	}
-	fmt.Println(p)
 	return p
 }
