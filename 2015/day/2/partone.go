@@ -4,6 +4,9 @@ import "github.com/bernot-dev/advent-of-code/helpers"
 
 // PartOne solves the first part of the problem.
 func PartOne(input Input) (solution Solution) {
+	for _, p := range input {
+		solution += Solution(p.Wrapping())
+	}
 	return
 }
 
