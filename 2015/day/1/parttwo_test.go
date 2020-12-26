@@ -6,7 +6,7 @@ import (
 
 func TestPartTwo(t *testing.T) {
 	tests := []TestCase{
-		{"sample.txt", 0},
+		{"input.txt", 1783},
 	}
 	for _, tc := range tests {
 		t.Run(tc.inputFile, func(t *testing.T) {
@@ -15,5 +15,21 @@ func TestPartTwo(t *testing.T) {
 				t.Errorf("Expected: %v, Actual: %v", tc.expected, actual)
 			}
 		})
+	}
+}
+
+func TestEntersBasement(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected int
+	}{
+		{")", 1},
+		{"()())", 5},
+	}
+	for _, tc := range tests {
+		actual := EntersBasement(tc.input)
+		if actual != tc.expected {
+			t.Errorf("Expected: %d, Actual: %d", tc.expected, actual)
+		}
 	}
 }
