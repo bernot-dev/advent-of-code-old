@@ -1,6 +1,7 @@
 package helpers
 
 import (
+	"bufio"
 	"io/ioutil"
 	"os"
 )
@@ -12,4 +13,14 @@ func String(f *os.File) string {
 		panic(err)
 	}
 	return string(b)
+}
+
+// StringLines return the contents of the file with each line as an element of a slice
+func StringLines(f *os.File) (lines []string) {
+	lines = make([]string, 0)
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		lines = append(lines, scanner.Text())
+	}
+	return
 }
