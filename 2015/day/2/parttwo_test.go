@@ -6,7 +6,7 @@ import (
 
 func TestPartTwo(t *testing.T) {
 	tests := []TestCase{
-		{"sample.txt", 0},
+		{"sample.txt", 34 + 14},
 	}
 	for _, tc := range tests {
 		t.Run(tc.inputFile, func(t *testing.T) {
