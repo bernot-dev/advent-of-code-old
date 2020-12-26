@@ -17,3 +17,19 @@ func TestPartOne(t *testing.T) {
 		})
 	}
 }
+
+func TestWrapping(t *testing.T) {
+	tests := []struct {
+		input    Present
+		expected int
+	}{
+		{Present{2, 3, 4}, 58},
+		{Present{1, 1, 10}, 43},
+	}
+	for _, tc := range tests {
+		actual := tc.input.Wrapping()
+		if actual != tc.expected {
+			t.Errorf("Expected: %d, Actual: %d", tc.expected, actual)
+		}
+	}
+}
