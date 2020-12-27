@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"io/ioutil"
 	"os"
+	"strings"
 )
 
 // String returns the contents of the file as a single string
@@ -12,7 +13,7 @@ func String(f *os.File) string {
 	if err != nil {
 		panic(err)
 	}
-	return string(b)
+	return strings.TrimSpace(string(b))
 }
 
 // StringLines return the contents of the file with each line as an element of a slice
