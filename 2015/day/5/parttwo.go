@@ -14,7 +14,8 @@ func PartTwo(input Input) (solution Solution) {
 	return
 }
 
-// RepeatedPair .
+// RepeatedPair determines if string contains a pair of any two letters that appears at least twice in
+// the string without overlapping, like xyxy (xy) or aabcdefgaa (aa), but not like aaa (aa, but it overlaps).
 func RepeatedPair(s string) bool {
 	for i := 1; i < len(s); i++ {
 		for j := i + 2; j < len(s); j++ {
@@ -26,7 +27,8 @@ func RepeatedPair(s string) bool {
 	return false
 }
 
-// ThirdWheel .
+// ThirdWheel determines if string contains at least one letter which repeats with exactly one letter
+//  between them, like xyx, abcdefeghi (efe), or even aaa.
 func ThirdWheel(s string) (t bool) {
 	for i := 2; i < len(s); i++ {
 		if s[i] == s[i-2] {
