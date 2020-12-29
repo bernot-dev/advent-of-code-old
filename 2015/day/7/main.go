@@ -22,7 +22,7 @@ func main() {
 	p1 := PartOne(input, "a")
 	fmt.Println("Part 1 Solution:", p1)
 
-	p2 := PartTwo(input)
+	p2 := PartTwo(input, "a")
 	fmt.Println("Part 2 Solution:", p2)
 }
 
