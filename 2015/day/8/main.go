@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+
+	"github.com/bernot-dev/advent-of-code/helpers"
 )
 
 // Input is the type of incoming data
@@ -31,5 +33,5 @@ func ReadInput(f string) Input {
 	}
 
 	// Process data
-	return nil
+	return helpers.StringLines(inputFile)
 }
