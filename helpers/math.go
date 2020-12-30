@@ -1,8 +1,10 @@
 package helpers
 
+import "math"
+
 // Min finds the smallest of the values
 func Min(n ...int) (min int) {
-	min = int(^uint(0) >> 1)
+	min = math.MaxInt64
 	for _, v := range n {
 		if v < min {
 			min = v
@@ -13,7 +15,7 @@ func Min(n ...int) (min int) {
 
 // Max finds the largest of the values
 func Max(n ...int) (max int) {
-	max = -int(^uint(0)>>1) - 1
+	max = math.MinInt64
 	for _, v := range n {
 		if v > max {
 			max = v
