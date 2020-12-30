@@ -12,6 +12,6 @@ type TestCase struct {
 
 func assertDeepEquals(t *testing.T, actual, expected interface{}) {
 	if !reflect.DeepEqual(actual, expected) {
-		t.Errorf("Actual: %v\nExpected: %v", actual, expected)
+		t.Errorf("Expected: %v, Actual: %v", expected, actual)
 	}
 }

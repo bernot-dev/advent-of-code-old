@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"log"
 	"os"
+
+	"github.com/bernot-dev/advent-of-code/helpers"
 )
 
 // Input is the type of incoming data
-type Input []string
+type Input []byte
 
 // Solution is the type of the eventual solution
 type Solution int
@@ -31,5 +33,5 @@ func ReadInput(f string) Input {
 	}
 
 	// Process data
-	return nil
+	return Input(helpers.StringLines(inputFile)[0])
 }
