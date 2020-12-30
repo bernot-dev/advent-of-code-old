@@ -28,7 +28,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # Copy template
-cp $BASEDIR/template/* $PWD
+cp -r $BASEDIR/template/* $PWD
 
 # Initialize go module
 go mod init "github.com/bernot-dev/advent-of-code/$RELATIVE" &&
