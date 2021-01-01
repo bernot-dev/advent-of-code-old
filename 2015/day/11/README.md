@@ -13,4 +13,4 @@ However, the logic required to handle the edge cases for that "faster" method ca
 
 The logic may seem relatively clear at this point. However, what if the next match requires rolling over an earlier character? Enter recursion. Meanwhile, the "slow" version of the program can solve this problem a few thousand times a second. Yes, the "fast" version, can theoretically solve it 1000x faster, but it's just not necessary in this case.
 
-All that said, I have learned that it is usually best to solve Part One close to the description, because you never know exactly what variation you will get for Part Two. In this case, it turns out, the same approach would have worked well, but that's just luck of the draw.
+All that said, I have learned that it is usually best to solve Part One close to the description, because you never know exactly what variation you will get for Part Two. In this case, it turns out the same approach would have worked well, but that's just luck of the draw.
