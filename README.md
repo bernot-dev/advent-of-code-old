@@ -59,4 +59,4 @@ Not included in repo. The creator of Advent of Code does not permit sharing puzz
 
 
 ## Code Reviews Welcome!
-I would love to hear your feedback! Please open an issue to share thoughts/comments.
+I would love to hear your feedback! Please [open an issue](../../issues/new) to share thoughts/comments.
