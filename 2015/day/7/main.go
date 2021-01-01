@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 	"regexp"
 	"strconv"
 
@@ -17,13 +18,23 @@ type Input []Gate
 type Solution uint16
 
 func main() {
-	input := ReadInput("input.txt")
-
-	p1 := PartOne(input, "a")
+	p1 := PartOne(ReadInput("input.txt"), "a")
 	fmt.Println("Part 1 Solution:", p1)
 
-	p2 := PartTwo(input, "a")
+	p2 := PartTwo(ReadInput("input.txt"), "a")
 	fmt.Println("Part 2 Solution:", p2)
+
+	graphFile, err := os.Create("circuit.gv")
+	if err != nil {
+		panic(err)
+	}
+	graph(ReadInput("input.txt"), graphFile)
+	cmd := exec.Command("dot", "-Tsvg", "circuit.gv", "-o", "circuit.svg")
+	fmt.Println("Generating graph")
+	err = cmd.Run()
+	if err != nil {
+		panic(err)
+	}
 }
 
 // ReadInput reads the input file and converts it to an appropriate format
