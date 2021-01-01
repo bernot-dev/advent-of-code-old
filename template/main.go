@@ -13,12 +13,10 @@ type Input []string
 type Solution int
 
 func main() {
-	input := ReadInput("input.txt")
-
-	p1 := PartOne(input)
+	p1 := PartOne(ReadInput("input.txt"))
 	fmt.Println("Part 1 Solution:", p1)
 
-	p2 := PartTwo(input)
+	p2 := PartTwo(ReadInput("input.txt"))
 	fmt.Println("Part 2 Solution:", p2)
 }
 
