@@ -12,7 +12,7 @@ import (
 type Input string
 
 // Solution is the type of the eventual solution
-type Solution int
+type Solution string
 
 func main() {
 	p1 := PartOne(ReadInput("input.txt"))
