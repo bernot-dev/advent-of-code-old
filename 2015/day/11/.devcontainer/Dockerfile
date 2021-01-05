@@ -11,7 +11,7 @@ RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "source /usr/local/shar
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends vim
+    && apt-get -y install --no-install-recommends vim graphviz
 
 # [Optional] Uncomment the next line to use go get to install anything else you need
 RUN go get -x github.com/smartystreets/goconvey
