@@ -1,18 +1,24 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestPartTwo(t *testing.T) {
-	tests := []TestCase{
-		{"sample.txt", 0},
+	tests := map[string][]TestCase{
+		"sample.txt": {0},
 	}
-	for _, tc := range tests {
-		t.Run(tc.inputFile, func(t *testing.T) {
-			actual := PartTwo(ReadInput(tc.inputFile))
-			if actual != tc.expected {
-				t.Errorf("Expected: %v, Actual: %v", tc.expected, actual)
+	for inputFile, ts := range tests {
+		t.Run(inputFile, func(t *testing.T) {
+			input := ReadInput(inputFile)
+			for _, tc := range ts {
+				t.Run(fmt.Printf("%v", tc), func(t *testing.T) {
+					actual := PartTwo(input)
+					if actual != tc.expected {
+						t.Errorf("Expected: %v, Actual: %v", tc.expected, actual)
+					}
+				})
 			}
 		})
 	}
