@@ -7,7 +7,9 @@ import (
 
 func TestPartOne(t *testing.T) {
 	tests := map[string][]TestCase{
-		"sample.txt": {{0}},
+		"sample.txt": {
+			{62842880},
+		},
 	}
 	for inputFile, ts := range tests {
 		t.Run(inputFile, func(t *testing.T) {
